@@ -1,2 +1,2 @@
-# ChooseUptoturn
+# ChooseToUpturn
 Globant Training Assignments
