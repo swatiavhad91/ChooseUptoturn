@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        body {
+            background-image: url('../Downloads/bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            background-color: black;
+            height: calc(100% - 60%);
+            width: calc(100% - 50%);
+            margin: 10% auto;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+
+        .left-col {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 50%;
+            
+        }
+
+    
+        h3 {
+            color: white;
+            text-align: center;
+        }
+        .w3-input {
+            margin: 0;
+            padding: 0;
+            color: #97D7F2;
+            background-color: black;
+            margin-bottom: 10px;
+            height: 20px;
+        }
+
+        .input-label {
+          
+            font-size: small;
+            color: #97D7F2;
+        }
+        .right-col{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+           width: 50%;
+          
+        
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="form-container">
+
+        <header>
+            <h3>contact us form</h3>
+        </header>
+
+        <div class="parent">
+        <div class="left-col">
+                
+                <label class="input-label">Name</label>
+                <input class="w3-input" type="text" required>
+                
+                <label class="input-label">Email Address</label>
+                <input class="w3-input" type="email" required>
+        
+                <label class="input-label">Phone</label>
+                <input class="w3-input" type="tel" maxlength="10" required>
+                
+                <label class="input-label">Subject</label>
+                <input class="w3-input" type="text" required >
+        </div>
+
+            <div class="right-col">
+                <label class="input-label">Message</label>
+                <input class="w3-input" type="textarea" style="height: 187px;">
+                <button type="button" class="btn" name="send" style="background-color:skyblue; color: white;font-weight: bold;">SEND</button>
+        
+            </div>
+            
+            
+            </div>
+
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>
