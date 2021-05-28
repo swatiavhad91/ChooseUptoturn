@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChooseToUpTurn Ass-2</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        body {
+            background-image: url('../Downloads/bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 350px;
+            min-width: 34%;
+            max-width: 35%;
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            /* align-items: center; */
+           height: 100%;
+           width: 100%;
+            background-color: black;
+           
+           
+        }
+        .form-header{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: relative;
+            left: 120px;
+        }
+        
+        .col1-container {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            
+            
+        }
+        .col2-container
+        {
+            display: flex;
+            flex-direction: column;
+            
+           width: auto;
+            margin-top: 15.5%;
+    
+            
+        }
+
+        header{
+
+            color: white;
+        text-align: center;
+            font-size: x-large;
+            color: #97D7F2;
+            font-weight: bold;
+
+        }
+
+            
+        .w3-input {
+            margin: 0;
+            padding: 0;
+            color: #97D7F2;
+            background-color: black;
+            margin-bottom: 10px;
+            height: 20px;
+        }
+
+        .input-label {
+          
+            font-size: small;
+            color: #97D7F2;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="form-container">
+        <form class="w3-container">
+            <div class="form-header">
+                <header>
+               <h3> Contact Us Form</h3>
+            </header>
+            </div>
+            <br>
+            <div class="col1-container">
+                <label class="input-label">Name</label>
+                <input class="w3-input" type="text" required>
+                
+                <label class="input-label">Email Address</label>
+                <input class="w3-input" type="email" required>
+        
+                <label class="input-label">Phone</label>
+                <input class="w3-input" type="tel" maxlength="10" required>
+                
+                <label class="input-label">Subject</label>
+                <input class="w3-input" type="text" required >
+            </div>
+
+            <div class="col2-container">
+                <div>
+                    <label class="input-label">Message</label>
+                    <input class="w3-input" type="textarea" style="height: 187px;">
+                    <button name="send" style="background-color:skyblue;color: white; border-radius: 5px; width: 250px;height: 30px;border: none;">SEND</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
