@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        body {
+            /* background-image: url('../Downloads/bg.jpg'); */
+            background-image: url('https://lh3.googleusercontent.com/6k9BQe0KYQ7lxGZrF2HyvxbF5FAscvp_AhbEU6PROCm2dE-b3Ax5dVQVYYLCdIIExsLZAGK02ehl-rs=w1349-h657');
+        
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            background-color: black;
+
+            height: 350px;
+            min-width: 400px;
+            max-width: 550px;
+            margin: 5% auto;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+
+            padding: 10px;
+        }
+
+        .left-col {
+            display: flex;
+            flex-direction: column;
+
+            width: 45%;
+
+        }
+
+        .right-col {
+            display: flex;
+            flex-direction: column;
+
+            width: 45%;
+            margin-left: 5px;
+
+        }
+
+
+        h3 {
+            color: white;
+            text-align: center;
+        }
+
+        .w3-input {
+            margin: 0;
+            padding: 0;
+            color: white;
+            background-color: black;
+            margin-bottom: 10px;
+            height: 20px;
+        }
+
+        .input-label {
+
+            font-size: small;
+            color: #97D7F2;
+        }
+
+        @media screen and (max-width:500px) {
+            .form-container {
+                flex-direction: row;
+                height: auto;
+                width: 200px;
+                justify-content: center;
+
+            }
+
+            .parent {
+                flex-direction: column;
+
+            }
+
+            .left-col {
+                width: 100%;
+            }
+
+            .right-col {
+                width: 100%;
+                margin-left: 0px;
+                height: 100px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width:275px) and (max-width:406px) {
+            .form-container {
+                flex-direction: column;
+                height: auto;
+                width: 100px;
+                align-items: flex-start;
+
+            }
+
+            .parent {
+                flex-direction: column;
+                width: 275px;
+
+            }
+
+            .left-col {
+                width: 100%;
+            }
+
+            .right-col {
+                width: 100%;
+                margin-left: 0px;
+                height: 100px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            header {
+                position: relative;
+                left: 15%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="form-container">
+
+        <header>
+            <h3 style="color: #97D7F2;">contact us form</h3>
+        </header>
+
+        <div class="parent">
+            <div class="left-col">
+
+                <label class="input-label">Name</label>
+                <input class="w3-input" type="text" required>
+
+                <label class="input-label">Email Address</label>
+                <input class="w3-input" type="email" required>
+
+                <label class="input-label">Phone</label>
+                <input class="w3-input" type="tel" maxlength="10" required>
+
+                <label class="input-label">Subject</label>
+                <input class="w3-input" type="text" required>
+            </div>
+
+            <div class="right-col">
+
+                <label for="form7" style="color: #97D7F2;">Message</label>
+                <textarea id="form107" class="md-textarea form-control" rows="8"
+                    style="margin-bottom: 5px; background-color:black;color: white; border-top: none;border-left: none;border-right: none;"></textarea>
+
+                <button type="button" class="btn" name="send"
+                    style="background-color:skyblue; color: white;font-weight: bold;">SEND</button>
+
+            </div>
+
+
+        </div>
+
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>
