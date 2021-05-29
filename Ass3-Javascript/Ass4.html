@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript to find Vowels from String!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        function findVowels() {
+
+            var vowels = ['a', 'e', 'i', 'o', 'u','A','E','I','O','U'];
+            var vowelsFound = [];
+
+            var txt = document.getElementById("txt").value;
+
+            for (i = 0; i < txt.length; i++) {
+                if (vowels.indexOf(txt[i]) != -1) {
+                    vowelsFound.push(txt[i]);
+                }
+            }
+            document.getElementById("result").innerHTML = "<p>Vowels found: " + vowelsFound + "</p><p>Vowels count: " + vowelsFound.length + "</p>";
+        }
+    </script>
+</head>
+
+<body>
+    <label for="txt">Enter Text:</label>
+    <input type="text" id="txt">
+    <button type="button" onclick="findVowels()">Find Vowel</button>
+    <div id="result"></div>
+</body>
+
+</html>
