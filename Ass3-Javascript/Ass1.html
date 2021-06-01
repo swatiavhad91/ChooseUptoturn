@@ -9,8 +9,8 @@
 <body>
 
     <label for="">Enter the no. of Hot Dogs that you want to buy : </label>
-    <input type="text" id="text1">
-    <button id="btn" onclick="saleHotdogs()">Click Me</button>
+    <input type="text" id="text1" placeholder="Enter the no. of Dogs..">
+    <button id="btn" onclick="saleHotdogs()"> See the  Total Price</button>
 
     <script>
     function saleHotdogs(n){
@@ -24,11 +24,11 @@
         }
         else if(n>=5 && n<10){
             var p2=n*95;
-            document.write("You have purchased " +n+ " dogs.. <br><br>  Price per dog is 95 Rs.<br><br>  So total Price is: " +p2);
+            document.write("You have purchased " +n+ " dogs..<br><br> So you got 5 Rs. Discount per dog.. <br><br>  Price per dog is 95 Rs.<br><br>  So total Price is: " +p2);
         }
         else if(n>=10){
             var p3=n*90;
-            document.write("You have purchased " +n+ " dogs.. <br><br>  Price per dog is 90 Rs. <br><br> So total Price is: " +p3);
+            document.write("You have purchased " +n+ " dogs..<br><br> So You got 10 Rs Discount per dog.. <br><br>  Price per dog is 90 Rs. <br><br> So total Price is: " +p3);
 
         } 
         else
