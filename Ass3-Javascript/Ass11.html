@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>  
+        var start_date, end_date;  
+         
+        start_date = new Date("07/15/2015");  
+        end_date = new Date("07/15/2016");  
+ 
+         
+        var time_difference = end_date.getTime() - start_date.getTime();  
+ 
+        
+        var days_difference = time_difference / (1000 * 60 * 60 * 24);  
+          
+        document.write("Start Date is : " + start_date + "<br> End Date is : " + end_date + 
+        "<br><br>The number of Days between Start date and End date are: " + days_difference +
+         " days including end date..");  
+     </script>    
+
+</body>
+</html>
