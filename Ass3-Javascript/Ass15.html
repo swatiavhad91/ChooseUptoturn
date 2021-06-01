@@ -29,7 +29,7 @@
 
             background-color: black;
 
-            height: 350px;
+            height: 400px;
             min-width: 400px;
             max-width: 550px;
             margin: 5% auto;
@@ -167,9 +167,29 @@ function ValidateEmail() {
             lblError2.innerHTML = "You entered valid mail address.";
         }
     }
+
+    function ValidateNo() {
+        var mobile = document.getElementById('mobile');
+   
+    
+   var message = document.getElementById('message');
+
+ 
+ 
+   if(mobile.value.length!=10){
+      
+       
+       message.innerHTML = "Please Enter 10 digits mobile number.."
+
+   }
+   else
+   {
+       message2.innerHTML="Correct Mobile number.."
+   }
+   }
 </script>
 
-    <form action="" class="form-container">
+    <form action="" class="form-container" autocomplete="off">
 
         <header>
             <h3 style="color: #97D7F2;">contact us form</h3>
@@ -182,15 +202,18 @@ function ValidateEmail() {
                 <input  type="text" required name="input" id="input" placeholder="Enter Name...." onchange="upperMe()" />
 
                 <label class="input-label">Email Address</label>
-                <input  type="text" required id="txtEmail" onchange="ValidateEmail();" />
+                <input  type="text" required id="txtEmail"placeholder="Enter Email Address.." onchange="ValidateEmail()" />
                 <div id="lblError" style="color: red"></div>
                 <div id="lblError2" style="color: greenyellow"></div>
 
                 <label class="input-label">Phone</label>
-                <input  type="tel" maxlength="10" required>
+                <input autocomplete="off" maxlength="10" type="tel"required  id="mobile" placeholder="10 digit mobile number.."  onchange="ValidateNo()" />
+                <div id="message" style="color: red"></div>
+                <div id="message2" style="color: greenyellow;"></div>
+                
 
                 <label class="input-label">Subject</label>
-                <input  type="text" required>
+                <input  type="text" placeholder="Enter subject.." required>
             </div>
 
             <div class="right-col">
