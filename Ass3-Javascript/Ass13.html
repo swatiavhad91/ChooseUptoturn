@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+//  var someText = 'I am awesome text';
+// (function () {
+// console.log('Original value was: ' + someText);
+// var someText = I am super awesome text;
+// console.log('New value is: ' + someText);
+//  })();
+
+// var a = 1;
+// function b() { 
+//  a = 10;  return;
+ 
+//   function a() {}
+//   }
+// b();
+// console.log(a);
+
+// function foo() {
+//     function bar() {
+//         return 10;
+//     } return bar();
+//     function bar() {
+//         return 18;
+//     }
+// }
+// alert(foo());
+
+alert(foo());
+function foo() {
+    var bar = function () {
+        return 13;
+    };
+    return bar();
+    var bar = function () {
+        return 18;
+    };
+}
+
+</script>
+
+</body>
+</html>
