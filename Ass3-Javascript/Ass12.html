@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            
+
+        <script>  
+            var dob = new Date("02/08/2019");  
+          
+         
+    
+    var month_diff = Date.now() - dob.getTime();  
+      
+    
+    var age_dt = new Date(month_diff);   
+      
+       
+    var year = age_dt.getUTCFullYear();  
+      
+     
+    var age = Math.abs(year - 1970);  
+      
+    
+    document.write("Your Age is : " + age + " years");  
+
+    if(age>=60)
+    {
+        document.write("<br> You are eligible for vaccination. Try to contact nearest hospital....");
+    }
+    else if(age>=45 & age<60)
+    {
+        document.write("<br>Vaccination will start from 1st June....");
+    }
+    else if(age>=18 & age<45)
+    {
+        document.write("<br>Increase your immunity by Yoga & Pranayam. Eat healthy.. Stay Healthy..");
+    }
+    else if(age<18)
+    {
+        document.write("<br>Stay Home.. Stay Safe..");
+    }
+    else{
+        document.write("<br>Wrong Choice..");
+    }
+   
+            </script>   
+
+</body>
+</html>
