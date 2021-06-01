@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+
+    function highAndLow()
+    {
+        var high; 
+        var low; 
+        
+    
+        var numbers = [];
+    
+        for (var i = 0; i < 5; i++) {
+            high = numbers[0];
+            low = numbers[0];
+    
+            numbers.push(parseInt(prompt("Enter the numbers:  " + (i+1))));
+    
+            if (high < numbers[i]) {
+                high = numbers[i]; }
+            if (low > numbers[i]) {
+                low = numbers[i]; }
+    
+        }
+    
+        document.write("The highest number is " + high + ".<br>");
+        document.write("The lowest number is:  " + low + ".<br>");
+    }
+    highAndLow();
+        
+        </script>
+
+</body>
+</html>
