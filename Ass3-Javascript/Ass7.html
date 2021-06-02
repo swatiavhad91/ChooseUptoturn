@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <script>
+
+    function LetterChanges(str) {
+
+      var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      var ret = new Array();
+      var name = ret;
+
+      for (var x = 0; x < str.length; x++) {
+
+        for (var i = 0; i < alphabet.length; i++) {
+
+          if (checkIfCharInString(alphabet, str[x]) == false) {
+            ret[x] = str[x].toString();
+            break;
+          }
+
+          if (str[x] == alphabet[i]) {
+            if (alphabet[i] == "Z") {
+              ret[x] = "A";
+            } else {
+              ret[x] = alphabet[i + 1];
+            }
+          }
+        }
+      }
+
+
+      var output = ret.join("");
+
+      output = capitalizeVowels(output);
+
+
+      return output;
+
+
+    }
+
+    function checkIfCharInString(motherString, char) {
+      for (var i = 0; i < motherString.length; i++) {
+        if (motherString[i] == char.toString()) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    function capitalizeVowels(str) {
+      var vowel = "aeiou";
+      var newStr = new Array();
+
+      for (var i = 0; i < str.length; i++) {
+        for (var x = 0; x < vowel.length; x++) {
+          newStr[i] = str[i];
+
+          if (str[i] == vowel[x]) {
+            newStr[i] = vowel[x].toUpperCase();
+            break;
+          }
+        }
+      }
+
+      return newStr.join("");
+    }
+
+
+
+    document.write("<br> After letter change and capitalization of vowels in the letter changed string, modified string is : ");
+    document.write(LetterChanges("swati"));
+    console.log(LetterChanges("swati"));
+
+
+
+  </script>
+</body>
+
+</html>
