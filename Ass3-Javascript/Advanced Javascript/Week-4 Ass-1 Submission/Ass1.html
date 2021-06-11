@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week-4 Ass1</title>
+</head>
+<body>
+   
+    <script>
+
+function person(Name, Age, Gender, Interests, Bio)
+    {
+
+    this.name= Name;
+    this.age=Age;
+    this.gender=Gender;
+    this.interests=Interests;
+    this.bio=Bio;
+
+    }
+    
+    var person1=new person("Swati", "30", "Female", "Web Devlopment", "XYZ");
+    var person2=new person("Nilesh","33", "Male", "Automobile", "PQR");
+
+
+    document.write("<br>Details of Person1 are : <br> Name : " +person1.name+ "<br> Age : "+person1.age+
+     "<br> Gender : "+person1.gender+ "<br>Interests : "+person1.interests+ "<br> Bio : "+person1.bio);
+    
+     document.write("<br><br><br>Details of Person2 are : <br> Name : " +person2.name+ "<br> Age : "+person2.age+
+     "<br> Gender : "+person2.gender+ "<br>Interests : "+person2.interests+ "<br> Bio : "+person2.bio);
+
+    </script>
+
+
+</body>
+</html>
