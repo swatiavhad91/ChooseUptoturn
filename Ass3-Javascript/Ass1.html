@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <label for="">Enter the no. of Hot Dogs that you want to buy : </label>
     <input type="text" id="text1" placeholder="Enter the no. of Dogs..">
-    <button id="btn" onclick="saleHotdogs()"> See the  Total Price</button>
+    <button id="btn" onclick="saleHotdogs()"> See the Total Price</button>
+
+    <div id="screen1"></div>
+    <div id="screen2"></div>
+    <div id="screen3"></div>
 
     <script>
-    function saleHotdogs(n){
+        function saleHotdogs(n) {
 
-        var n=document.getElementById("text1").value;
+            var n = document.getElementById("text1").value;
 
-        if(n<5)
-        {
-            var p1=n*100;
-            document.write("You have purchased " +n+ " dogs.. <br><br>  Price per dog is 100 Rs.<br><br>  So total Price is: " +p1);
-        }
-        else if(n>=5 && n<10){
-            var p2=n*95;
-            document.write("You have purchased " +n+ " dogs..<br><br> So you got 5 Rs. Discount per dog.. <br><br>  Price per dog is 95 Rs.<br><br>  So total Price is: " +p2);
-        }
-        else if(n>=10){
-            var p3=n*90;
-            document.write("You have purchased " +n+ " dogs..<br><br> So You got 10 Rs Discount per dog.. <br><br>  Price per dog is 90 Rs. <br><br> So total Price is: " +p3);
+            if (n < 5) {
+                var p1 = n * 100;
+                document.write("You have purchased " + n + " dogs.. <br><br>  Price per dog is 100 Rs.<br><br>  So total Price is: " + p1);
+            }
+            else if (n >= 5 && n < 10) {
+                var p2 = n * 95;
+                document.write("You have purchased " + n + " dogs..<br><br> So you got 5 Rs. Discount per dog.. <br><br>  Price per dog is 95 Rs.<br><br>  So total Price is: " + p2);
+            }
+            else if (n >= 10) {
+                var p3 = n * 90;
+                document.write("You have purchased " + n + " dogs..<br><br> So You got 10 Rs Discount per dog.. <br><br>  Price per dog is 90 Rs. <br><br> So total Price is: " + p3);
 
-        } 
-        else
-        {
-            document.write("You have selected a wrong choice.....");
+            }
+            else {
+                document.write("You have selected a wrong choice.....");
+            }
         }
-    }
-</script>
+    </script>
 
 
 </body>
+
 </html>

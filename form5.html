@@ -26,9 +26,11 @@
             flex-wrap: wrap;
 
             background-color: black;
-            height: calc(100% - 60%);
-            width: calc(100% - 50%);
-            margin: 10% auto;
+           
+            height: 350px;
+            min-width: 400px;
+            max-width:550px;
+            margin:5% auto;
         }
 
         .parent {
@@ -36,45 +38,76 @@
             flex-direction: row;
             flex-wrap: wrap;
             width: 100%;
-            justify-content: space-evenly;
+           
             padding: 10px;
         }
 
         .left-col {
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
-            width: 50%;
+
+            width: 45%;
             
         }
-
+        .right-col {
+            display: flex;
+            flex-direction: column;
     
+            width: 45%;
+            margin-left: 5px;
+
+        }
+
+
         h3 {
             color: white;
             text-align: center;
         }
+
         .w3-input {
             margin: 0;
             padding: 0;
-            color: #97D7F2;
+            color: white;
             background-color: black;
             margin-bottom: 10px;
             height: 20px;
         }
 
         .input-label {
-          
+
             font-size: small;
             color: #97D7F2;
         }
-        .right-col{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-           width: 50%;
-          
+
+        @media screen and (max-width:500px) {
+            .form-container{
+                flex-direction: row;
+                height: auto;
+                width: 200px;
         
+            }
+            .parent{
+                flex-direction: column;
+                
+            }
+            .left-col{
+                width: 100%;
+            }
+            .right-col{
+                width: 100%;
+                margin-left: 0px;
+                height: 100px;
+            }
+            h3{
+                text-align: center;
+            }
+           .btn{
+               width: 100%;
+           }
         }
+        
+
+       
     </style>
 </head>
 
@@ -82,34 +115,38 @@
     <form action="" class="form-container">
 
         <header>
-            <h3>contact us form</h3>
+            <h3 style="color: #97D7F2;">contact us form</h3>
         </header>
 
         <div class="parent">
-        <div class="left-col">
-                
+            <div class="left-col">
+
                 <label class="input-label">Name</label>
                 <input class="w3-input" type="text" required>
-                
+
                 <label class="input-label">Email Address</label>
                 <input class="w3-input" type="email" required>
-        
+
                 <label class="input-label">Phone</label>
                 <input class="w3-input" type="tel" maxlength="10" required>
-                
+
                 <label class="input-label">Subject</label>
-                <input class="w3-input" type="text" required >
-        </div>
+                <input class="w3-input" type="text" required>
+            </div>
 
             <div class="right-col">
-                <label class="input-label">Message</label>
-                <input class="w3-input" type="textarea" style="height: 187px;">
-                <button type="button" class="btn" name="send" style="background-color:skyblue; color: white;font-weight: bold;">SEND</button>
-        
+
+                <label for="form7" style="color: #97D7F2;">Message</label>
+                <textarea id="form107" class="md-textarea form-control" rows="8"
+                    style="margin-bottom: 5px; background-color:black;color: white; border-top: none;border-left: none;border-right: none;"></textarea>
+
+                <button type="button" class="btn" name="send"
+                    style="background-color:skyblue; color: white;font-weight: bold;">SEND</button>
+
             </div>
-            
-            
-            </div>
+
+
+        </div>
 
         </div>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        nestedObj = {
+            name: 'Jhon',
+            address: {
+                city: 'xyz',
+                pincode: '123456',
+                phoneNumber: {
+                    home: 9998887776,
+                    work: {
+                        office1: 9922334455,
+                        office2: 9922334466,
+                    }
+                }
+            }
+        }
+        console.log("\n NestedObj=>", nestedObj);
+
+        
+
+        var deepCopy = JSON.parse(JSON.stringify(nestedObj));
+
+        
+
+        console.log("\n DeepCopy=>", deepCopy)
+        
+    
+
+
+
+    </script>
+
+</body>
+
+</html>

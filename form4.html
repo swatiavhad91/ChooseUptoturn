@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        body {
+            background-image: url('../Downloads/bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            
+
+            background-color: black;
+           min-width: 35%;
+           max-width: 36%;
+            height: 350px;
+            margin: 10% auto;
+        }
+
+            
+       
+        .col1-container{
+            display: flex;
+            flex-direction: column;
+            
+            width: 45%;
+
+            color: white;
+            margin-left: 10px;
+        }
+        .col2-container{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            margin: 0 auto;
+        }
+        .w3-input{
+            background-color: black;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <form action="" class="form-container">
+        
+        <div class="col1-container">
+                <label class="input-label">Name</label>
+                <input class="w3-input" type="text" required>
+                
+                <label class="input-label">Email Address</label>
+                <input class="w3-input" type="email" required>
+        
+                <label class="input-label">Phone</label>
+                <input class="w3-input" type="tel" maxlength="10" required>
+                
+                <label class="input-label">Subject</label>
+                <input class="w3-input" type="text" required >
+            </div>
+
+            <div class="col2-container">
+                <label class="input-label">Message</label>
+                    <input class="w3-input" type="textarea" style="width: 200px; height: 245px;margin-left:5px;margin-left: 5px;">
+                    <button name="send" style="margin-top: 5px; background-color:skyblue;color: white; border-radius: 5px; width: 210px;height: 30px;border: none;">SEND</button>
+           </div>
+
+    </form>
+
+</body>
+
+</html>
