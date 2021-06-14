@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="">Enter array elements</label>
+    <input type="text" id="inp">
+    <button id="btn1">Submit</button>
+    <button id="btn2">Display Array Elements</button>
+    <button id="btn3">Postive Numbers & it's squares</button>
+    
+
+    <div id="res1"></div>
+    <div id="res2"></div>
+    <div id="res3"></div>
+    <div id="res4"></div>
+
+    <script>
+      
+        var inputArray = [];
+
+        var input = document.getElementById("inp");
+        var s1 = document.getElementById("res1")
+        var s2 = document.getElementById("res2");
+
+        document.getElementById("btn1").onclick = function () {
+
+            inputArray.push(input.value);
+            s1.innerHTML = input.value;
+
+        };
+
+        document.getElementById("btn2").onclick = function () {
+            document.getElementById("res2").innerHTML = "Array elements are : " + inputArray;
+        };
+
+        document.getElementById("btn3").onclick = function () {
+            var positiveArray = inputArray.filter(x => x > 0)
+            document.getElementById("res3").innerHTML = "Positive numbers in array are : " + positiveArray;
+
+            var square = positiveArray.map(x => x * x);
+            document.getElementById("res4").innerHTML = "Squares of positive numbers are : " + square;
+        }
+    </script>
+
+</body>
+
+</html>

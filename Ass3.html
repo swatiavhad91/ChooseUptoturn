@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function multiplyRest(num1, num2, ...restof) {        
+
+            console.log("First two numbers are : ");
+            console.log(num1);
+            console.log(num2);
+
+            console.log("Rest of the numbers are : ");
+            console.log(restof);
+
+            var addFirstTwo = num1 + num2;
+            console.log("Addition of first two numbers is : " + addFirstTwo);
+
+
+            let mul = 1;
+            for (var arg of restof)
+                mul *= arg;
+            console.log("Multiplication of rest of the numbers is : " + mul);
+
+            let totalSum = addFirstTwo + mul;
+
+            console.log("Total Sum is : " + totalSum);
+
+        }
+ multiplyRest(1, 2, 3, 4, 5, 6);
+
+    </script>
+
+</body>
+
+</html>

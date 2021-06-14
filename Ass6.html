@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        data = [
+            {
+                name: 'Butters',
+                age: 3,
+                type: 'dog'
+            },
+            {
+                name: 'Lizzy',
+                age: 6,
+                type: 'cat'
+            },
+            {
+                name: 'Red',
+                age: 1,
+                type: 'cat'
+            },
+            {
+                name: 'Joey',
+                age: 9,
+                type: 'dog'
+            },
+            {
+                name: 'Bruno',
+                age: 5,
+                type: 'dog'
+            },
+            {
+                Name: 'Lucy',
+                age: 8,
+                type: 'dog'
+            },
+            {
+                Name: 'Suzy',
+                age: 13,
+                type: 'dog'
+            },
+        ];
+
+        let newArray = data.map((item) => ({ age: item.age, type: item.type }));
+
+        console.log("Array of type and age properties of object : ");
+        console.log(newArray);
+
+        var newArray2 = newArray.filter(function (el) {
+            return el.type === 'dog';
+        }
+        );
+        console.log("Array of type dogs' and ages of dogs's after filtering cat : ")
+        console.log(newArray2);
+
+
+        var ageArray = newArray2.map(newArray2 => newArray2.age);
+        console.log("Array of dogs's ages : ")
+        console.log(ageArray);
+
+        var ageArray2 = ageArray.map(ageArray => ageArray * 7);
+        console.log("Dogs's ages after multiply it by 7 : ");
+        console.log(ageArray2);
+
+        var sumAge = ageArray2.reduce((a, b) => a + b);
+        console.log("Addition of all ages of dogs's after multiply it by 7 : "+sumAge);
+       // console.log(sumAge);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    let obj1={
+        name:"test",
+        age:4
+    };
+
+    let obj2={
+        gender:"Female",
+        photo: "www.someurl.com"
+        
+    };
+
+    let obj3={
+        hobbies:"Coding",
+        profession:"Developer"
+    };
+
+    let mergedObject={
+        ...obj1,
+        ...obj2,
+        ...obj3
+    };
+
+    console.log("Object-1 is : ");
+    console.log(obj1);
+    console.log("Object-2 is : ");
+    console.log(obj2);
+    console.log("Object-3 is : ");
+    console.log(obj3);
+
+    console.log("Merged Object after merging all 3 objects is : ")
+
+    console.log(mergedObject);
+
+    </script>
+
+</body>
+</html>
