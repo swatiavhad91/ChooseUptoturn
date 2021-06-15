@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+let employees=[{
+ name: 'Sabha',
+Gender: 'female',
+Salary: 300000
+},
+{
+ name: 'Reshma',
+Gender: 'female',
+Salary: 1000000
+},
+{
+ name: 'Sushma',
+Gender: 'female',
+Salary: 2500000
+},
+{
+ name: 'Jaya',
+Gender: 'female',
+Salary: 5600000
+},
+{
+ name: 'Sagar',
+Gender: 'female',
+Salary: 2000000
+},
+{
+ name: 'Sudeep',
+Age: 45,
+Salary:  1300000
+},
+{
+ name: 'Sandeep',
+Age: 64,
+Gender: 'male'
+}]
+
+let taxableEmp=employees.filter(employees=>employees.Salary>500000);
+console.log("Taxable_Employees");
+console.log(taxableEmp);
+
+//Condition-1
+
+let Tax_COndition_01=taxableEmp.filter(taxableEmp=>taxableEmp.Salary>=500000 && taxableEmp.Salary<=1000000);
+console.log("Employees_having_salary_between_5_to_10_lakhs & 5% Tax to pay");
+console.log(Tax_COndition_01);
+
+//Condition-2
+
+let Tax_COndition_02=taxableEmp.filter(taxableEmp=>taxableEmp.Salary>1000000 && taxableEmp.Salary<=2000000);
+console.log("Employees_having_salary_between_10_to_20_lakhs & 10% Tax to pay");
+console.log(Tax_COndition_02);
+
+//Condition-3
+
+let Tax_COndition_03=taxableEmp.filter(taxableEmp=>taxableEmp.Salary>2000000);
+console.log("Employees_having_salary_above_20_lakhs & 20% Tax to pay");
+console.log(Tax_COndition_03);
+
+//Condition-4
+
+let Tax_COndition_04=employees.filter(employees=>employees.Salary<=300000);
+console.log("Employees_having_salary_below_3_lakhs & 0% Tax to pay");
+console.log(Tax_COndition_04);
+
+
+//Tax-condition-1
+
+
+let five_percnt_tax=Tax_COndition_01.map(Tax_COndition_01=>((Tax_COndition_01.Salary-250000)*5/100));
+Tax_COndition_01['Tax']=five_percnt_tax;
+
+
+//Tax-condition-2
+
+
+let ten_percnt_tax=Tax_COndition_02.map(Tax_COndition_02=>((Tax_COndition_02.Salary-250000)*10/100));
+Tax_COndition_02['Tax']=ten_percnt_tax;
+
+
+//Tax-condition-3
+
+
+let twenty_percnt_tax=Tax_COndition_03.map(Tax_COndition_03=>((Tax_COndition_03.Salary-250000)*20/100));
+Tax_COndition_03['Tax']=twenty_percnt_tax;
+
+
+//Tax-condition-4
+
+
+let zero_percnt_tax=Tax_COndition_04.map(Tax_COndition_04=>((Tax_COndition_04.Salary-250000)*0/100));
+Tax_COndition_04['Tax']=zero_percnt_tax;
+
+
+let employees2=[{
+ name: 'Sabha',
+Gender: 'female',
+Salary: 300000,
+Tax:zero_percnt_tax[0]
+},
+{
+ name: 'Reshma',
+Gender: 'female',
+Salary: 1000000,
+Tax:five_percnt_tax[0]
+},
+{
+ name: 'Sushma',
+Gender: 'female',
+Salary: 2500000,
+Tax:twenty_percnt_tax[0]
+
+},
+{
+ name: 'Jaya',
+Gender: 'female',
+Salary: 5600000,
+Tax:twenty_percnt_tax[1]
+},
+{
+ name: 'Sagar',
+Gender: 'female',
+Salary: 2000000,
+Tax:ten_percnt_tax[0]
+},
+{
+ name: 'Sudeep',
+Age: 45,
+Salary:  1300000,
+Tax:ten_percnt_tax[1]
+},
+{
+ name: 'Sandeep',
+Age: 64,
+Gender: 'male'
+}]
+console.log("\n Final Output \n Employees with their amout of Tax to Pay according to their salary : ")
+console.log(employees2);
+
+
+</script>
+    
+</body>
+</html>

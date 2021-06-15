@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+let users=[{
+ name: 'Sabha',
+Age: 2,
+Gender: 'female'
+},
+{
+ name: 'Reshma',
+Age: 19,
+Gender: 'female'
+},
+{
+ name: 'Sushma',
+Age: 29,
+Gender: 'female'
+},
+{
+ name: 'Jaya',
+Age: 24,
+Gender: 'female'
+},
+{
+ name: 'Sagar',
+Age: 33,
+Gender: 'female'
+},
+{
+ name: 'Sudeep',
+Age: 45,
+Gender: 'male'
+},
+{
+ name: 'Sandeep',
+Age: 64,
+Gender: 'male'
+}]
+
+
+var Children=users.filter((x)=>{return x.Age<=18;});
+console.log("Children");
+console.log(Children);
+
+var Youth=users.filter((x)=>{return x.Age>=15 && x.Age<=24;});
+console.log("Youth");
+console.log(Youth);
+
+var Adults=users.filter((x)=>{return x.Age>=25 && x.Age<=64;});
+console.log("Adults");
+console.log(Adults);
+
+var Senior_citizen=users.filter((x)=>{return x.Age>=65});
+console.log("Senior Citizen");
+console.log(Senior_citizen);
+
+</script>
+    
+</body>
+</html>
