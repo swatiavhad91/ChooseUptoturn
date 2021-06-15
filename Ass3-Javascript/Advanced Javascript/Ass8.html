@@ -20,9 +20,9 @@
     </tr>
     <tr>
       <td class="tbl_id">1</td>
-      <td><input id="textbox1" type="text" name="tm1[]" style="margin-left: 20px;" ></td>
+      <td><input id="textbox1" type="text" name="tm1[]" style="margin-left: 20px;" onchange =hideNameBox(this) /></td>
 
-      <td><input id="textbox2" type="email" name="nm2[]" style="margin-left: 20px;" /></td>
+      <td><input id="textbox2" type="email" name="nm2[]" style="margin-left: 20px;" onchange=hideMailBox(this) /></td>
       <td>
         <select name="" id="" style="margin-left: 20px;">
           <option value="">Male</option>
@@ -72,6 +72,26 @@
 
     var ob_adRows = new adRowsTable('table1');
 
+    function hideNameBox(x) {
+let input = document.getElementById("textbox1");
+
+
+input.style.borderBottomStyle="hidden"
+input.style.borderTopStyle ="hidden"
+input.style.borderLeftStyle="hidden"
+input.style.borderRightStyle="hidden"
+input.style.outline="none"
+}
+
+function hideMailBox(x) {
+let input=document.getElementById("textbox2");
+
+input.style.borderBottomStyle="hidden"
+input.style.borderTopStyle ="hidden"
+input.style.borderLeftStyle="hidden"
+input.style.borderRightStyle="hidden"
+input.style.outline="none"
+}
   </script>
 
 </body>
