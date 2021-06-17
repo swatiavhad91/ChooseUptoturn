@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function randomNumberGenerator(minimum, maximum) {
+
+
+            return new Promise(function (resolve, reject) {
+                var res = Math.floor(Math.random() * (maximum - minimum)) + minimum;
+                setTimeout(console.log("Random Number between 0 to 10 is : "+res), 2000);
+                setTimeout(resolve, 2000);
+            }).then(function () {
+                console.log("Resolved");
+            });
+        }
+        randomNumberGenerator(0, 10);
+
+    </script>
+
+</body>
+
+</html>
